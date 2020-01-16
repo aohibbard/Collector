@@ -1,0 +1,21 @@
+<h2><%= @current_user.name %>'s Collection</h2>
+<!-- Show Artworks div class="artworks" -->
+
+<a href="/artworks/new">Add an artwork</a><br>
+
+<br>
+<br>
+<div>
+<% @artworks.each do |artwork| %>
+    <a href="/artists/<%=artwork.artist.id%>"><%= artwork.artist.name %></a><br>
+    <a href="/artworks/<%= artwork.id %>"><em><%= artwork.title %></a>, <%= artwork.year %>  </em> <br>
+    <%= artwork.material %> <br>
+    <%= artwork.dimensions %> <br>
+    <br>
+    <% end %>
+</div>
+
+<!-- Options : Add artwork, Edit Account class=options or something -->
+
+<a href="/logout">Log Out</a>
+

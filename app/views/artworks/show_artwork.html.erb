@@ -1,0 +1,7 @@
+<p><%= @artwork.artist.name %><br>
+<em><%= @artwork.title %><em>, <%= @artwork.year %><br>
+<%= @artwork.material %><br>
+<%= @artwork.dimensions %><br></p>
+
+<a href="/artworks">See All Works</a><br>
+<a href="/artworks/<%= @artwork.id %>/edit">Edit Artwork</a>

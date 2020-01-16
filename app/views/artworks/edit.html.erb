@@ -1,0 +1,33 @@
+<h2> Edit Artwork </h2>
+<form method="POST" action="/artworks/<%= @artwork.id %>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+
+    <label for="artist">Artist:</artist>
+    <input type="text" name="artist[name]" id="artist" value="<%= @artwork.artist.name %>"><br>
+
+    <label for="title">Title:</title>
+    <input type="text" name="artwork[title]" id="title" value="<%= @artwork.title %>"><br>
+
+    <label for="year">Year:</label>
+    <input type="text" name="artwork[year]" id="year" value="<%= @artwork.year %>"> <br>
+
+    <label for="material">Medium:</label>
+    <input type="text" name="artwork[material]" id="material" value="<%= @artwork.material %>"><br>  
+
+    <label for="artist">Dimensions:</label>
+    <input type="text" name="artwork[dimensions]" id="dimensions" value="<%= @artwork.dimensions %>"><br>  
+
+    <input type="submit" value="Update"><br>
+</form>
+
+
+<form action="/artworks/<%= @artwork.id %>/scramble" method="post">
+  <input id="hidden" type="hidden" name="_method" value="post">
+  <input type="submit" value="Scramble Year">
+</form>
+
+
+<form action="/artworks/<%= @artwork.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
