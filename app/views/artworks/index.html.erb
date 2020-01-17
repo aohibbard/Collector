@@ -1,18 +1,31 @@
 <h2><%= @current_user.name %>'s Collection</h2>
 <!-- Show Artworks div class="artworks" -->
 
-<a href="/artworks/new">Add an artwork</a><br>
+<div class="dropdown">
+  <button class="dropbtn">Options</button>
+  <div class="dropdown-content">
+    <a href="/artworks/new">Add an artwork</a><br>
+    <a href="/artworks/sort_year">Sort by Year</a>
+    <a href="/artworks/sort_by_name">Sort by Artist Last Name</a>
+  </div>
+</div>
+
 
 <br>
 <br>
 <div>
-<% @artworks.each do |artwork| %>
-    <a href="/artists/<%=artwork.artist.id%>"><%= artwork.artist.name %></a><br>
-    <a href="/artworks/<%= artwork.id %>"><em><%= artwork.title %></a>, <%= artwork.year %>  </em> <br>
-    <%= artwork.material %> <br>
-    <%= artwork.dimensions %> <br>
-    <br>
+<% if @artworks.size == 0 %>
+    <p>You don't have any artworks to show.</p><br>
+    <p>Add an artwork to your database <a href="/artworks/new">here</a>.</p>
+    <% else %>
+    <% @artworks.each do |artwork| %>
+        <a href="/artists/<%=artwork.artist.id%>"><%= artwork.artist.name %></a><br>
+        <a href="/artworks/<%= artwork.id %>"><em><%= artwork.title %></a>, <%= artwork.year %>  </em> <br>
+        <%= artwork.material %> <br>
+        <%= artwork.dimensions %> <br>
+        <br>
     <% end %>
+<% end %> 
 </div>
 
 <!-- Options : Add artwork, Edit Account class=options or something -->

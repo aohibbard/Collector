@@ -14,7 +14,7 @@ gem 'tux'
 gem 'faker'
 gem 'rack-flash3'
 # gem 'open-uri'
-# gem 'json'
+gem 'json'
 
 group :test do
   gem 'rspec'

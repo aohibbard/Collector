@@ -16,6 +16,15 @@ class ArtworksController < ApplicationController
         else 
             redirect '/login'
         end 
+    end
+
+    get "/artworks/sort_year" do 
+        if logged_in?
+            @artworks = current_user.artworks.sort_by{|artwork| artwork[:year]}
+            erb :'artworks/sort_year.html'
+        else
+            redirect '/login'
+        end 
     end 
 
     get "/artworks/:id" do 

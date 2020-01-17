@@ -11,6 +11,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
+    # @stylesheet_link = "/stylesheets/not-logged-in.css"
+    #   File.read(File.join('public', 'index.html'))
     erb :index
   end
 
@@ -19,16 +21,16 @@ class ApplicationController < Sinatra::Base
     erb :'error-page'
   end 
 
-  post "/artworks/:id/scramble" do 
-    if logged_in?
-        @artwork = Artwork.find_by_id(params[:id])
-        @artwork.year = "4991"
-        @artwork.save 
-        erb :'artworks/find_year.html'
-    else
-        redirect '/login'
-    end 
-end 
+#   post "/artworks/:id/scramble" do 
+#     if logged_in?
+#         @artwork = Artwork.find_by_id(params[:id])
+#         @artwork.year = "4991"
+#         @artwork.save 
+#         erb :'artworks/find_year.html'
+#     else
+#         redirect '/login'
+#     end 
+# end 
 
   helpers do 
     def logged_in?
