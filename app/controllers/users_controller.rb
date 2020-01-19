@@ -14,7 +14,6 @@ class UsersController < ApplicationController
       if !logged_in?
         erb :"/users/login.html"
       else
-        # change this
         redirect "/artworks"
       end 
     end 
@@ -44,8 +43,7 @@ class UsersController < ApplicationController
         @user = User.new(:name => params[:name], :email => params[:email], :password => params[:password])
         if @user.save
           session[:user_id] = @user.id 
-          # flash[:notice] = "Thanks for signing up"
-          # redirect "/users/#{@user.id}" 
+          # flash.now[:notice] = "Thanks for signing up!"
           redirect "/artworks"
         else 
           erb :'users/signup'
@@ -57,6 +55,7 @@ class UsersController < ApplicationController
       @user = User.find_by(:email => params[:email])
       if @user && @user.authenticate(params[:password])
         session[:user_id] = @user.id 
+        flash[:notice] = "Welcome back!"
         redirect "/artworks"
       else 
         redirect to '/login'
@@ -76,6 +75,7 @@ class UsersController < ApplicationController
     get '/logout' do 
       if logged_in?
         session.destroy 
+        flash[:notice] = "Goodbye!"
         redirect '/login'
       else 
         redirect '/index'

@@ -13,9 +13,9 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: #dfe3dc;
     color: #333;
-    font-family: Bookman;
+    font-family: Roboto;
     line-height: 18px;
   }
 
@@ -113,6 +113,52 @@
     line-height: 24px;
   }
 }
+
+/* position images on artist page*/ 
+.artist_thumbnail {
+  float: right;
+}
+
+.landing{
+  text-align: cente;
+
+}
+
+/* Style sign-up/login pages */
+.loginfields{
+  text-align: left;
+  margin: 36px 64px 36px 64px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #8fcc91;
+  border: none;
+  color: black;
+  padding:  padding:0.35em 1.2em;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+button:hover {
+  opacity: 0.6;
+}
+
 
 /* Style the navigation menu */
 .topnav {

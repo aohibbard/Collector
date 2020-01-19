@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200113164313) do
+ActiveRecord::Schema.define(version: 20200118183655) do
 
   create_table "artists", force: :cascade do |t|
-    t.string  "name"
-    t.integer "birth_year"
+    t.string "name"
+    t.string "birthday"
+    t.string "deathday"
+    t.string "nationality"
+    t.text   "biography"
+    t.string "img_url"
+    t.string "name_sorted"
   end
 
   add_index "artists", ["name"], name: "index_artists_on_name"

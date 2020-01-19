@@ -12,10 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
-    <script src="public/javascripts/main.js"></script>
+    <script src="./public/javascripts/main.js"></script>
 
   </head>
   <body>
+  <% if logged_in? %>
   <div class="topnav">
   <a href="/href" class="active">Collectr</a>
   <!-- Navigation links (hidden) -->
@@ -29,13 +30,13 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
+<% end %>
     <div class="wrapper">
 
         <%= yield %>
 
       <footer class="branding">
-        <small>&copy; 2020 <strong>Collector</strong></small>
+        <small>&copy; 2020 <strong>Collectr</strong><%if logged_in? %> | <a href="/logout">Log Out</a><% end %></small>
       </footer>
     </div>
 

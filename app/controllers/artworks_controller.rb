@@ -21,11 +21,24 @@ class ArtworksController < ApplicationController
     get "/artworks/sort_year" do 
         if logged_in?
             @artworks = current_user.artworks.sort_by{|artwork| artwork[:year]}
-            erb :'artworks/sort_year.html'
+            erb :'artworks/index.html'
         else
             redirect '/login'
         end 
     end 
+
+    # # this should be in Artist controller
+    # get "/artworks/sort_by_name" do
+    #     if logged_in?
+    #         artists = current_user.artists.each do |artist|
+    #             artist.name_sorter
+    #         end 
+    #         @artworks = artists.sort_by{|artist| artist[:name_sorted]}
+    #         erb :'artworks/index.html'
+    #     else
+    #         redirect '/login'
+    #     end 
+    # end 
 
     get "/artworks/:id" do 
         if logged_in?
@@ -48,27 +61,6 @@ class ArtworksController < ApplicationController
             redirect '/login'
         end 
     end 
-
-    # get "/artworks/from2010s" do 
-    #     if logged_in? 
-    #         binding.pry
-    #         @artwork = Artwork.find_by_year(2013)
-    #         erb :"/artworks/find_year.html"
-    #     else 
-    #         redirect '/login'
-    #     end 
-    # end 
-
-    # patch "/artworks/:id/scramble" do 
-    #     if logged_in?
-    #         @artwork = Artwork.find_by_id(params[:id])
-    #         @artwork.year = "4991"
-    #         @artwork.save 
-    #         redirect "/artworks/:id"
-    #     else
-    #         redirect '/login'
-    #     end 
-    # end 
 
     post "/artwork" do 
         if params[:artist][:name] == "" || params[:artwork][:title] == "" || params[:artwork][:year] == ""
@@ -111,5 +103,3 @@ class ArtworksController < ApplicationController
 
 
 end 
-
-#get '/dogs', to: index

@@ -15,6 +15,8 @@ gem 'faker'
 gem 'rack-flash3'
 # gem 'open-uri'
 gem 'json'
+gem 'hyperclient'
+gem 'httparty'
 
 group :test do
   gem 'rspec'

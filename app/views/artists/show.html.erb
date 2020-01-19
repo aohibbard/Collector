@@ -1,0 +1,12 @@
+<img class="artist_thumbnail" src="<%= @artist.img_url %>" alt="An artist thumbnail">
+<b><%= @artist.name %><br></b>
+Birth: <%= @artist.birthday %><br>
+<% if @artist.deathday != nil %>
+Death: <%= @artist.deathday %><br>
+<% end %>
+Nationality: <%= @artist.nationality %><br>
+<%= @artist.biography %><br>
+
+<form action="/artworks" method="get">
+    <button type="submit">Return to Artworks</button>
+</form>

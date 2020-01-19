@@ -10,9 +10,9 @@ class Artwork < ActiveRecord::Base
         Artwork.all.find{|artwork| artwork.slug == slug}
     end 
 
-    # def sort_by_year 
-    #     self.artworks.sort_by {|artwork| (artwork[:year].to_i)}
-    # end 
+    def last_name
+        self.artist.name.split[-1]
+    end 
 
     # def owned 
         # if self.user_id == nil 

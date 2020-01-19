@@ -1,14 +1,12 @@
 <h2><%= @current_user.name %>'s Collection</h2>
-<!-- Show Artworks div class="artworks" -->
 
-<div class="dropdown">
-  <button class="dropbtn">Options</button>
-  <div class="dropdown-content">
-    <a href="/artworks/new">Add an artwork</a><br>
-    <a href="/artworks/sort_year">Sort by Year</a>
-    <a href="/artworks/sort_by_name">Sort by Artist Last Name</a>
-  </div>
-</div>
+<form action="/artworks/new" method="get">
+    <button type="submit">Add a New Artwork</button>
+</form>
+<br>
+<form action="/artworks/sort_year" method="get">
+    <button type="submit">Sort By Year</button>
+</form>
 
 
 <br>
@@ -20,7 +18,7 @@
     <% else %>
     <% @artworks.each do |artwork| %>
         <a href="/artists/<%=artwork.artist.id%>"><%= artwork.artist.name %></a><br>
-        <a href="/artworks/<%= artwork.id %>"><em><%= artwork.title %></a>, <%= artwork.year %>  </em> <br>
+        <a href="/artworks/<%= artwork.id %>"><em><%= artwork.title %></a></em>, <%= artwork.year %><br>
         <%= artwork.material %> <br>
         <%= artwork.dimensions %> <br>
         <br>
@@ -29,6 +27,4 @@
 </div>
 
 <!-- Options : Add artwork, Edit Account class=options or something -->
-
-<a href="/logout">Log Out</a>
-
+<a href="#top">Jump to top of page</a>
