@@ -16,7 +16,7 @@ gem 'rack-flash3'
 # gem 'open-uri'
 gem 'json'
 gem 'hyperclient'
-gem 'httparty'
+# gem 'httparty'
 
 group :test do
   gem 'rspec'
