@@ -12,23 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
-    <script src="./public/javascripts/main.js"></script>
 
   </head>
   <body>
   <% if logged_in? %>
-  <div class="topnav">
-  <a href="/href" class="active">Collectr</a>
-  <!-- Navigation links (hidden) -->
-  <div id="myLinks">
-    <a href="/artworks">My Art</a>
-    <a href="/user/:id"><My Account</a>
-    <a href="/logout">Log Out</a>
-  </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+<div class="navbar">
+<ul>
+<li><a href="/artworks" style="text-decoration: none;">Collection Home</a></li>
+<li> | </li>
+<li><a href="/artworks/new" style="text-decoration: none;">Add an Artwork</a></li>
+<li> | </li>
+<li><a href="/logout" style="text-decoration: none;">Log Out</a></li>
+</ul>
 </div>
 <% end %>
     <div class="wrapper">
