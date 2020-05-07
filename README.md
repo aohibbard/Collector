@@ -5,7 +5,7 @@ Collectr is a Sinatra application built as a project for the Flatiron School. Th
 ## Getting Started
 
 To run the project locally, fork and clone the project:
-`git clone git@github.com:AnnaWijetunga/budget.git` and change to the local directory. Ensure gem dependencies are installed with `bundle install`, and run `shotgun` to operate locally. Unless configured differently, the project will run at `localhost:9393`.
+`git@github.com:aohibbard/Collector.git` and change to the local directory. Ensure gem dependencies are installed with `bundle install`, and run `shotgun` to operate locally. Unless configured differently, the project will run at `localhost:9393`.
 
 ### Prerequisites
 
