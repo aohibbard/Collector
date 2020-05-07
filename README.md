@@ -1,6 +1,6 @@
 # Collectr
 
-Collectr is a Sinatra application built as a project for the Flatiron School. The application allows users to login and and manage a database of artworks (ostsensibly ones owned by them)
+Collectr is a Sinatra application built as a project for the Flatiron School. The application allows users to login and and manage a database of artworks (ostsensibly ones owned by them). A video demo is available at: https://vimeo.com/385857973 . A Heroku deployment is available at: https://collectr-app.herokuapp.com/
 
 ## Getting Started
 
