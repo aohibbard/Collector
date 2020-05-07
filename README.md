@@ -4,11 +4,12 @@ Collectr is a Sinatra application built as a project for the Flatiron School. Th
 
 ## Getting Started
 
-To run the project locally, clone the repository, run 'bundle install', and type 'shotgun' into the terminal.
+To run the project locally, fork and clone the project:
+`git clone git@github.com:AnnaWijetunga/budget.git` and change to the local directory. Ensure gem dependencies are installed with `bundle install`, and run `shotgun` to operate locally. Unless configured differently, the project will run at `localhost:9393`.
 
 ### Prerequisites
 
-The project requires an internet connection. It is built with Ruby for Sinatra and runs on an sqlite database. The Hyperclient gem is required to work with Artsy's API.
+The project requires an internet connection. It is built with Ruby for Sinatra and runs on an sqlite database for development and uses PostgresQL for production. The Hyperclient gem is required to work with Artsy's API. 
 
 ## Built With
 

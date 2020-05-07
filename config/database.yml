@@ -8,7 +8,7 @@ test:
 
 production:
   adapter: postgresql
-  database: sch_database #rename this to whatever you want
+  database: production
   username: username
   password: password
-  host: localhost
+  host: <%= ENV['DATABASE_HOST'] %>
