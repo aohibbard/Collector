@@ -10,7 +10,6 @@ class ArtistsController < ApplicationController
             else 
                 # Query API if artist is not in sqlite
                 @artist.api_request #remove slug
-            # binding.pry
                 erb :'/artists/show.html'
             end 
         else 
