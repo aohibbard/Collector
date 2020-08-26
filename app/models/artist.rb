@@ -65,6 +65,12 @@ class Artist < ActiveRecord::Base
     # curl -v -L https://api.artsy.net/api/artists/kiki-smith -H
     # 'X-Xapp-Token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI1ZTIwOWRmYzg0YmFkMzAwMGVhNmY2Y2YiLCJleHAiOjE1Nzk4MDA3MDAsImlhdCI6MTU3OTE5NTkwMCwiYXVkIjoiNWUyMDlkZmM4NGJhZDMwMDBlYTZmNmNmIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjVlMjA5ZGZjZDliODFmMDAxMzAxMjJhNiJ9.wawEbpyXEp2SdqWOQCkwJ_VM_LZWHALygHSeO3EY18A'
 
+    # def spreedly
+        # access_secret = 'sPFiOP74KvLTfo080h8O93qWrGJ4pFjQlI2PjW7OC19VuI7zwBifhzLuDL6Cuk3C'
+        # key = 'YgNnfB8z12los0E66R8xHBT7YYI'
+        # signing_secret = 'uxdYJqIaC1FILokJ9l2LAB1xDD4JOQgxaLnQjBeDP6cXlX9pi4deDnKmnZpw4BLY'
+        # gateway_token = 'MYARw5CfF93C3jepdcFYdciCTUh'
+    # end
 
 
 end 
